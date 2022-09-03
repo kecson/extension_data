@@ -16,7 +16,7 @@ extension IterableIntExt on Iterable<int> {
   ///
   /// Example:
   /// ```dart
-  ///  [0,1,2,3,4].toNoPrefixHex(); // "0x0001020304"
+  ///  [0,1,2,3,4].toHex(); // "0x0001020304"
   /// ```
   String toHex() => '0x${toNoPrefixHex()}';
 
