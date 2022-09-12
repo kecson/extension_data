@@ -60,7 +60,9 @@ void main() {
     //DateTimeExt
     final dateTime = TimeUnit.milliseconds.parseTimestamp('$timestampInMs');
     expect(dateTime.toString(), '2022-09-01 01:23:45.123');
-    expect(DateTime(2022, 9, 1, 1, 23, 45, 123).toTimestamp(TimeUnit.milliseconds), timestampInMs);
+    expect(
+        DateTime(2022, 9, 1, 1, 23, 45, 123).toTimestamp(TimeUnit.milliseconds),
+        timestampInMs);
     //StringExt
     expect(strBs64.toBase64Data().bytes, bytes);
     expect(strBs64.toBase64Data().value, strBs64);

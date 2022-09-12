@@ -6,7 +6,7 @@ class Base64Data {
   /// From base64 String [value]
   const Base64Data(this.value);
 
-  factory Base64Data.fromBytes(Iterable<int> bytes) => Base64Data(bytes.toBase64());
+  Base64Data.fromBytes(Iterable<int> bytes) : this(bytes.toBase64());
 
   /// Base64 String
   final String value;
@@ -17,4 +17,14 @@ class Base64Data {
   /// return base64 String [value]
   @override
   String toString() => value;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Base64Data &&
+          runtimeType == other.runtimeType &&
+          value == other.value;
+
+  @override
+  int get hashCode => value.hashCode;
 }

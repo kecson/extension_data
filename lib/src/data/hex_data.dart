@@ -6,7 +6,7 @@ class HexData {
   /// From Hex String.
   const HexData(this.value);
 
-  factory HexData.fromBytes(Iterable<int> bytes) => HexData(bytes.toHex());
+  HexData.fromBytes(Iterable<int> bytes) : this(bytes.toHex());
 
   /// Hex String
   final String value;
@@ -42,4 +42,14 @@ class HexData {
   /// return Hex String [value].
   @override
   String toString() => value;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is HexData &&
+          runtimeType == other.runtimeType &&
+          value == other.value;
+
+  @override
+  int get hashCode => value.hashCode;
 }

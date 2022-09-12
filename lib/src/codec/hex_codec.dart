@@ -10,7 +10,8 @@ import 'package:convert/convert.dart' show hex;
 /// hexDecode('F0102'); // [15,1,2]
 ///```
 List<int> hexDecode(String hexString) {
-  var encoded = hexString.trim().replaceFirst(RegExp('^0x', caseSensitive: false), '');
+  var encoded =
+      hexString.trim().replaceFirst(RegExp('^0x', caseSensitive: false), '');
   if (encoded.length % 2 != 0) {
     encoded = encoded.padLeft(encoded.length + 1, '0');
   }

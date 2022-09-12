@@ -2,7 +2,13 @@
 
 [![pub package](https://img.shields.io/pub/v/extension_data.svg)](https://pub.dev/packages/extension_data)
 
-## Using
+- Dart extensions and extension Data.
+
+- Include base64Encode、base58Encode、hexEncode and Base58Data、Base64Data、HexData.
+
+- Include DateTime、Iterable<int>、num、String extension.
+
+## Usage
 
 ```dart
 import 'package:extension_data/extension_data.dart';
@@ -30,15 +36,16 @@ void main() {
 ```
 
 ```dart
- test('Test Data', () {
-    //base58Data
-    expect(Base58Data(strBs58).bytes, bytes);
-    expect(Base58Data.fromBytes(bytes).value, strBs58);
-    //base64Data
-    expect(Base64Data(strBs64).bytes, bytes);
-    expect(Base64Data.fromBytes(bytes).value, strBs64);
-    //hexData
-    expect(HexData(hexStr).bytes, bytes);
-    expect(HexData.fromBytes(bytes).value, hexStr);
-  });
+ test
+('Test Data', () {
+//base58Data
+expect(Base58Data(strBs58).bytes, bytes);
+expect(Base58Data.fromBytes(bytes).value, strBs58);
+//base64Data
+expect(Base64Data(strBs64).bytes, bytes);
+expect(Base64Data.fromBytes(bytes).value, strBs64);
+//hexData
+expect(HexData(hexStr).bytes, bytes);
+expect(HexData.fromBytes(bytes).value, hexStr);
+});
 ```

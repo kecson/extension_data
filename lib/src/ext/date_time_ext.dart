@@ -36,7 +36,10 @@ extension TimeUnitExt on TimeUnit {
         microsecondsSinceEpoch = timestamp.toInt() * 1000 * 1000;
         break;
     }
-    return DateTime.fromMicrosecondsSinceEpoch(microsecondsSinceEpoch, isUtc: isUtc);
+    return DateTime.fromMicrosecondsSinceEpoch(
+      microsecondsSinceEpoch,
+      isUtc: isUtc,
+    );
   }
 
   /// Format DateTime to timestamp.
@@ -62,7 +65,7 @@ extension TimeUnitExt on TimeUnit {
     return timestamp;
   }
 
-  /// Try to arse timestamp to DateTime.
+  /// Try to parse timestamp to DateTime.
   DateTime? tryParseTimestamp(String timestamp, {bool isUtc = false}) {
     try {
       return parseTimestamp(timestamp, isUtc: isUtc);

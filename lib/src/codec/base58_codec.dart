@@ -68,7 +68,8 @@ String base58Encode(List<int> bytes) {
 }
 
 /// All alphanumeric characters except for "0", "I", "O", and "l"
-const String _base58Alphabet = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
+const String _base58Alphabet =
+    '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
 
 const List<int> _reverseMap = [
   -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, //

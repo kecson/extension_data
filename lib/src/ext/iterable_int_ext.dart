@@ -36,7 +36,8 @@ extension IterableIntExt on Iterable<int> {
   /// [0,1,2,3,4].toShortHex(); // "0x1020304"
   /// ```
   String toShortHex() {
-    final trimmed = toHex().replaceFirst(RegExp('^0x0*', caseSensitive: false), '');
+    final trimmed =
+        toHex().replaceFirst(RegExp('^0x0*', caseSensitive: false), '');
     return '0x$trimmed';
   }
 

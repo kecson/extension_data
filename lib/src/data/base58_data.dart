@@ -6,7 +6,7 @@ class Base58Data {
   /// From base58 String [value]
   const Base58Data(this.value);
 
-  factory Base58Data.fromBytes(Iterable<int> bytes) => Base58Data(bytes.toBase58());
+  Base58Data.fromBytes(Iterable<int> bytes) : this(bytes.toBase58());
 
   /// Base58 String
   final String value;
@@ -17,4 +17,14 @@ class Base58Data {
   /// return base58 String [value]
   @override
   String toString() => value;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Base58Data &&
+          runtimeType == other.runtimeType &&
+          value == other.value;
+
+  @override
+  int get hashCode => value.hashCode;
 }

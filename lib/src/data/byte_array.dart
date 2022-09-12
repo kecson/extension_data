@@ -8,7 +8,10 @@ import 'package:extension_data/src/ext/iterable_int_ext.dart';
 /// ByteArray Buffer.
 class ByteArray extends Iterable<int> {
   ByteArray(Iterable<int> data)
-      : assert(data.every((e) => e < 256), 'All elements should be less than 256'),
+      : assert(
+          data.every((e) => e < 256),
+          'All elements should be less than 256',
+        ),
         _data = data.toList();
 
   const ByteArray._(this._data);
@@ -40,13 +43,16 @@ class ByteArray extends Iterable<int> {
   /// ByteArray.fromHex('000f010a').toList(); // [0,15,1,10]
   /// ByteArray.fromHex('F0102').toList(); // [15,1,2]
   ///```
-  factory ByteArray.fromHex(String hexString) => ByteArray(hexDecode(hexString));
+  factory ByteArray.fromHex(String hexString) =>
+      ByteArray(hexDecode(hexString));
 
   /// Init ByteArray from int8 value.
-  factory ByteArray.i8(int value) => ByteArray._fromByteData(ByteData(1)..setUint8(0, value));
+  factory ByteArray.i8(int value) =>
+      ByteArray._fromByteData(ByteData(1)..setUint8(0, value));
 
   /// Init ByteArray from uint8 value.
-  factory ByteArray.u8(int value) => ByteArray._fromByteData(ByteData(1)..setUint8(0, value));
+  factory ByteArray.u8(int value) =>
+      ByteArray._fromByteData(ByteData(1)..setUint8(0, value));
 
   /// Init ByteArray from int16 value.
   factory ByteArray.i16(int value) =>
@@ -68,7 +74,8 @@ class ByteArray extends Iterable<int> {
   factory ByteArray.i64(int value) => _encodeBigInt(BigInt.from(value), 8);
 
   /// Init ByteArray from uint64 value.
-  factory ByteArray.u64(int value) => _encodeBigIntAsUnsigned(BigInt.from(value), 8);
+  factory ByteArray.u64(int value) =>
+      _encodeBigIntAsUnsigned(BigInt.from(value), 8);
 
   /// Bytes value.
   final List<int> _data;

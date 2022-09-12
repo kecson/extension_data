@@ -24,6 +24,5 @@ extension BigIntExt on BigInt {
 
 /// num extension methods.
 extension NumExt on num {
-
   Decimal toDecimal() => Decimal.parse('$this');
 }

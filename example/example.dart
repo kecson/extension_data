@@ -5,7 +5,22 @@ import 'package:extension_data/extension_data.dart';
 void main() {
   const str = 'extension_data';
   //utf8 bytes
-  const bytes = [101, 120, 116, 101, 110, 115, 105, 111, 110, 95, 100, 97, 116, 97];
+  const bytes = [
+    101,
+    120,
+    116,
+    101,
+    110,
+    115,
+    105,
+    111,
+    110,
+    95,
+    100,
+    97,
+    116,
+    97
+  ];
   const hexStr = '0x657874656e73696f6e5f64617461';
   const strBs64 = 'ZXh0ZW5zaW9uX2RhdGE=';
   const strBs58 = 'eJdhyKqktt8nj9vnTwe';
