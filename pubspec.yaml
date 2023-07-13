@@ -1,14 +1,14 @@
 name: extension_data
 description: Dart extensions and extension Data. Include base64Encode、base58Encode、hexEncode and Base58Data、Base64Data、HexData.
-version: 0.1.2
+version: 1.0.0
 homepage: https://github.com/kecson/extension_data
 
 environment:
-  sdk: ">=2.14.0 <3.0.0"
+  sdk: ">=2.14.0 <4.0.0"
 
 dependencies:
-  convert: ^3.0.2
-  decimal: ^2.2.0
+  convert: ^3.1.1
+  decimal: ^2.3.3
 
 dev_dependencies:
   test: ^1.16.0

@@ -51,9 +51,33 @@ extension StringExt on String {
   /// Convert Base64 String to [Base64Data].
   Base64Data toBase64Data() => Base64Data.fromBytes(base64Decode(this));
 
+  Base64Data? tryToBase64Data() {
+    try {
+      return toBase64Data();
+    } catch (e) {
+      return null;
+    }
+  }
+
   /// Convert Base58 String to [Base58Data].
   Base58Data toBase58Data() => Base58Data.fromBytes(base58Decode(this));
 
+  Base58Data? tryToBase58Data() {
+    try {
+      return toBase58Data();
+    } catch (e) {
+      return null;
+    }
+  }
+
   /// Convert Hex String to [HexData].
   HexData toHexData() => HexData.fromBytes(hexDecode(this));
+
+  HexData? tryToHexData() {
+    try {
+      return toHexData();
+    } catch (e) {
+      return null;
+    }
+  }
 }
