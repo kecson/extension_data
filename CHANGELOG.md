@@ -1,3 +1,7 @@
+## 1.0.1
+
+* Updated dependencies
+
 ## 1.0.0
 
 * Updated Dart SDK requirement to >=2.14.0 <4.0.0
