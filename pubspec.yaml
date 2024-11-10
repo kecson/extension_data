@@ -3,6 +3,10 @@ description: Dart extensions and extension Data. Include base64Encode、base58En
 version: 1.0.1
 homepage: https://github.com/kecson/extension_data
 
+topics:
+  - utils
+  - extensions
+
 environment:
   sdk: ">=2.14.0 <4.0.0"
 
