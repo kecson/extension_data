@@ -56,13 +56,13 @@ void main() {
   });
 
   test('Test extension', () {
-    const timestampInMs = 1661966625123;
+    const utcTimestampInMs = 1661966625123;
     //DateTimeExt
-    final dateTime = TimeUnit.milliseconds.parseTimestamp('$timestampInMs');
-    expect(dateTime.toString(), '2022-09-01 01:23:45.123');
+    final dateTime = TimeUnit.milliseconds.parseTimestamp('$utcTimestampInMs',isUtc: true);
+    expect(dateTime.toString(), '2022-08-31 17:23:45.123Z');
     expect(
-        DateTime(2022, 9, 1, 1, 23, 45, 123).toTimestamp(TimeUnit.milliseconds),
-        timestampInMs);
+        DateTime.utc(2022, 8, 31, 17, 23, 45, 123,).toTimestamp(TimeUnit.milliseconds),
+        utcTimestampInMs);
     //StringExt
     expect(strBs64.toBase64Data().bytes, bytes);
     expect(strBs64.toBase64Data().value, strBs64);
